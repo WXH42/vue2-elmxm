@@ -1,23 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+
+import index from '@/views/index'
+import member from '@/views/member'
+import mine from '@/views/mine'
+import order from '@/views/order'
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+  // tab_bar底部栏路由
+  { path: '/', redirect: '/index' },
+  { path: '/index', component: index },
+
+  // 除index页外全部加上导航守卫!
+  { path: '/member', component: member },
+  { path: '/mine', component: mine },
+  { path: '/order', component: order }
 ]
 
 const router = new VueRouter({

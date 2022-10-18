@@ -2,7 +2,10 @@
 
 # 说明
 本项目是想自己开发一个大型的商城应用练手，为个人开发，可能会有很多bug，管他呢，有bug再改。
+只学习。不要在这买东西哈兄弟。你也买不了。。。。
 
+# 技术栈
+vue2 + vue-cli + webpack + less + vue-router + eslint + babel + axios + vant3组件库
 
 本次功能实现使用的接口为饿了么官方接口
 接口地址：https://openapi-doc.faas.ele.me/v2/quickstart.html。
