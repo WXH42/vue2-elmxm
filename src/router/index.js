@@ -6,8 +6,10 @@ import member from '@/views/member'
 import mine from '@/views/mine'
 import order from '@/views/order'
 
-Vue.use(VueRouter)
+import login from '@/views/login'
+import register from '@/views/register'
 
+Vue.use(VueRouter)
 const routes = [
   // tab_bar底部栏路由
   { path: '/', redirect: '/index' },
@@ -16,7 +18,11 @@ const routes = [
   // 除index页外全部加上导航守卫!
   { path: '/member', component: member },
   { path: '/mine', component: mine },
-  { path: '/order', component: order }
+  { path: '/order', component: order },
+
+  // 登录 注册路由
+  { path: '/login', component: login },
+  { path: '/register', component: register }
 ]
 
 const router = new VueRouter({
